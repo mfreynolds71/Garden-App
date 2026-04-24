@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
 
 const STORAGE_KEY = "garden-feeding-records";
 
@@ -36,20 +36,44 @@ const FEED_GROUPS = [
     quantity: "1 capful per 6L · 0.5–1L per plant, applied gently across bed",
   },
   {
-    id: "recent-moves",
-    label: "Recently Moved / Young Plants",
+    id: "bay-tree",
+    label: "Bay Tree",
+    feed: "Maxicrop Seaweed",
+    intervalDays: 365,
+    notes: "Hard pruned spring 2026 — wait until new shoots have properly unfurled before feeding. Do not feed at bud/tiny shoot stage. Follow Maxicrop with light Fish Blood & Bone scatter. Annual feed only after that",
+    quantity: "Maxicrop: dilute per label · Good drench at base once leaves open · Follow with 1–2 handfuls Fish Blood & Bone scratched in around base",
+  },
+    label: "Himalayan Honeysuckle",
+    feed: "Maxicrop Seaweed",
+    intervalDays: 365,
+    notes: "Cut back hard each year. Apply one Maxicrop drench once new shoots reach 30–40cm. Annual task — no regular feeding needed",
+    quantity: "Dilute per label · Good drench at base · One application per year only",
+  },
+    label: "Nepeta Six Hills Giant",
     feed: "Maxicrop Seaweed",
     intervalDays: 14,
-    notes: "Euphorbia Bed B, hellebore, foxglove Bed H, sweet peas",
-    quantity: "Dilute per label · Light drench at base of each plant — tonic not heavy feed · Can also apply as foliar spray in evening",
+    notes: "Mostly planted out late Apr, couple of splits from last year. One Maxicrop drench after 2 weeks to support establishment — then leave alone. Lean soil suits nepeta better long term",
+    quantity: "Dilute per label · Light drench at base only · One application only — do not feed regularly",
+  },
+    label: "Sweet Peas",
+    feed: "Maxicrop Seaweed",
+    intervalDays: 14,
+    notes: "Planted out ~17 Apr. Switch to Tomorite fortnightly once visibly climbing (mid-May). High-K suits continuous flower production — the more you pick the more they flower",
+    quantity: "Maxicrop: dilute per label · 1–2L per plant or cluster at base · Once switched to Tomorite: 1 capful per 6L, same volume",
+  },
+    label: "Fuchsias (Bed B)",
+    feed: "Maxicrop Seaweed",
+    intervalDays: 14,
+    notes: "Planted out 24 Apr. First 2 weeks: no feed. Then Maxicrop to support establishment. Switch to Tomorite fortnightly once visibly putting on new growth",
+    quantity: "Dilute per label · Light drench at base only · Don't feed until at least 2 weeks after planting",
   },
   {
-    id: "bed-a-perennials",
-    label: "Bed A Perennials",
-    feed: "Maxicrop Seaweed",
-    intervalDays: 21,
-    notes: "Delphiniums, hollyhocks, peonies — general tonic",
-    quantity: "Dilute per label · General drench across bed — no precise per-plant amount needed",
+    id: "peonies",
+    label: "Peonies (Bed A)",
+    feed: "Tomorite",
+    intervalDays: 28,
+    notes: "Feed now while in bud — high potassium supports flower development. Feed again 6 weeks after flowering to build up for next year. Avoid crown",
+    quantity: "1 capful per 6L · 1–2L per plant around drip line, not at crown · Follow with small handful of Fish Blood & Bone scratched in carefully — avoid disturbing shallow buds",
   },
   {
     id: "alstroemeria",
@@ -60,12 +84,12 @@ const FEED_GROUPS = [
     quantity: "1 capful per 6L · 1–2L per clump poured at base · Keep consistently moist between feeds",
   },
   {
-    id: "rhubarb",
-    label: "Rhubarb",
+    id: "cardoon",
+    label: "Cardoon",
     feed: "Fish, Blood & Bone",
     intervalDays: 28,
-    notes: "No harvesting this year — still establishing",
-    quantity: "2–3 handfuls scattered around base (not on crown) · Scratch lightly into soil · Water in well · Repeat every 4–6 weeks",
+    notes: "Flower spike forming — hungry plant about to put on major growth surge. Maxicrop drench also useful between feeds",
+    quantity: "3–4 handfuls scattered within mulched circle at base · Scratch in and water · Keep feed within mulch ring to avoid enriching surrounding meadow soil",
   },
   {
     id: "spinach",
@@ -352,4 +376,4 @@ export default function App() {
       </div>
     </div>
   );
-      }
+}

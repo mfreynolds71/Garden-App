@@ -1,4 +1,4 @@
- import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const STORAGE_KEY = "garden-feeding-records";
 
@@ -76,7 +76,13 @@ const FEED_GROUPS = [
     quantity: "1 capful per 6L · 1–2L per plant around drip line, not at crown · Follow with small handful of Fish Blood & Bone scratched in carefully — avoid disturbing shallow buds",
   },
   {
-    id: "alstroemeria",
+    id: "agapanthus",
+    label: "Agapanthus (Pots)",
+    feed: "Tomorite",
+    intervalDays: 14,
+    notes: "Split last year — re-establishing, may not flower this season. Start Tomorite once visibly pushing new growth (mid-May). Do not repot this year",
+    quantity: "1 capful per 6L · 1–1.5L per pot · Fortnightly through summer until end of August",
+  },
     label: "Alstroemeria (Peruvian Lily)",
     feed: "Tomorite",
     intervalDays: 14,
@@ -376,4 +382,4 @@ export default function App() {
       </div>
     </div>
   );
-}
+          }

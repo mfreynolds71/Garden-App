@@ -9,6 +9,7 @@ const FEED_GROUPS = [
     feed: "Vitax Seaweed + Iron",
     intervalDays: 14,
     notes: "Priority — sequestered iron bypasses pH issues",
+    quantity: "1 capful per 4L · 8L can with 2 capfuls covers all 5 plants · 1.5L per plant, poured slowly at base",
   },
   {
     id: "fruit-trees",
@@ -16,6 +17,7 @@ const FEED_GROUPS = [
     feed: "Tomorite",
     intervalDays: 14,
     notes: "Apple, apricot, damson, cherry, plum, stepover",
+    quantity: "1 capful per 6L · Trees in ground: 5L each around drip line · Stepover: 2–3L · Orchard trees (dwarf): 1.5L within 50cm of trunk",
   },
   {
     id: "fruiting-other",
@@ -23,6 +25,7 @@ const FEED_GROUPS = [
     feed: "Tomorite",
     intervalDays: 14,
     notes: "All actively fruiting / flowering plants",
+    quantity: "1 capful per 6L · Fig (pot): 1.5L at base · Grape (ground): 4–5L · Gooseberry: 2–3L",
   },
   {
     id: "strawberries",
@@ -30,6 +33,7 @@ const FEED_GROUPS = [
     feed: "Tomorite",
     intervalDays: 14,
     notes: "In raised beds and pots",
+    quantity: "1 capful per 6L · 0.5–1L per plant, applied gently across bed",
   },
   {
     id: "recent-moves",
@@ -37,6 +41,7 @@ const FEED_GROUPS = [
     feed: "Maxicrop Seaweed",
     intervalDays: 14,
     notes: "Euphorbia Bed B, hellebore, foxglove Bed H, sweet peas",
+    quantity: "Dilute per label · Light drench at base of each plant — tonic not heavy feed · Can also apply as foliar spray in evening",
   },
   {
     id: "bed-a-perennials",
@@ -44,6 +49,7 @@ const FEED_GROUPS = [
     feed: "Maxicrop Seaweed",
     intervalDays: 21,
     notes: "Delphiniums, hollyhocks, peonies — general tonic",
+    quantity: "Dilute per label · General drench across bed — no precise per-plant amount needed",
   },
   {
     id: "alstroemeria",
@@ -51,20 +57,23 @@ const FEED_GROUPS = [
     feed: "Tomorite",
     intervalDays: 14,
     notes: "High-potash feed every 2 weeks while flowering (late Apr–Sep)",
+    quantity: "1 capful per 6L · 1–2L per clump poured at base · Keep consistently moist between feeds",
   },
   {
     id: "rhubarb",
     label: "Rhubarb",
     feed: "Fish, Blood & Bone",
     intervalDays: 28,
-    notes: "Scatter around base (not on crown), scratch in and water. No harvesting this year — still establishing",
+    notes: "No harvesting this year — still establishing",
+    quantity: "2–3 handfuls scattered around base (not on crown) · Scratch lightly into soil · Water in well · Repeat every 4–6 weeks",
   },
   {
     id: "spinach",
     label: "Spinach",
     feed: "Fish, Blood & Bone",
     intervalDays: 28,
-    notes: "Light application only — hold until after first harvests when it needs to push new growth",
+    notes: "Hold until after first harvests when it needs to push new growth",
+    quantity: "1 handful per 0.6m² · Light scatter only · Scratch in and water · Don't overfeed — spinach is not hungry",
   },
 ];
 
@@ -218,6 +227,20 @@ export default function App() {
                     <div style={{ fontSize: 15, fontWeight: "bold", color: "#2c2416", marginBottom: 2 }}>{group.label}</div>
                     <div style={{ fontSize: 12, color: "#5a7a4a", fontStyle: "italic", marginBottom: 4 }}>{group.feed}</div>
                     <div style={{ fontSize: 11, color: "#8a7a68" }}>{group.notes}</div>
+                    {group.quantity && (
+                      <div style={{
+                        fontSize: 11,
+                        color: "#4a6a3a",
+                        background: "#f0f5ec",
+                        border: "1px solid #ccdfc0",
+                        borderRadius: 4,
+                        padding: "5px 8px",
+                        marginTop: 6,
+                        lineHeight: 1.5,
+                      }}>
+                        📏 {group.quantity}
+                      </div>
+                    )}
                   </div>
                   <div style={{
                     fontSize: 11,
@@ -329,5 +352,4 @@ export default function App() {
       </div>
     </div>
   );
-                  }
-                  
+      }
